@@ -10,6 +10,7 @@
 #define __slog__slog_api__
 
 #include <stdio.h>
+#include <string>
 
 #define WATCH_DELAY_TIME     10 * 1000
 
@@ -37,6 +38,7 @@ public:
     void Error(const char* format, ...);
     void Fatal(const char* format, ...);
     bool SetLevel(enLevel level);
+    void GetLevel(std::string& strLevel);
     bool RaiseLevel();
     bool DecreaseLevel();
 private:

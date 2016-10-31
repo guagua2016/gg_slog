@@ -31,6 +31,7 @@ public:
     virtual void Error(const char* loginfo) {}
     virtual void Fatal(const char* loginfo) {}
     virtual bool SetLevel(enLevel level) {}
+    virtual void GetLevel(std::string& strLevel) {}
     virtual bool RaiseLevel() {return true;}
     virtual bool DecreaseLevel() {return true;}
 };
@@ -48,6 +49,7 @@ public:
     void Error(const char* loginfo);
     void Fatal(const char* loginfo);
     bool SetLevel(enLevel level);
+    void GetLevel(std::string& strLevel);
     bool RaiseLevel();
     bool DecreaseLevel();
 private:
@@ -136,6 +138,11 @@ bool CLog4CXX::SetLevel(enLevel level)
 			return false;
 	}
 	return true;
+}
+
+void CLog4CXX::GetLevel(std::string& strLevel)
+{
+	m_logger->getLevel()->toString(strLevel);
 }
 
 bool CLog4CXX::RaiseLevel()
@@ -255,6 +262,11 @@ bool CSLog::SetLevel(enLevel enLevel)
 	return m_log->SetLevel(enLevel);
 }
 
+
+void CSLog::GetLevel(std::string& strLevel)
+{
+	return m_log->GetLevel(strLevel);
+}
 
 
 

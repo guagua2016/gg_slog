@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /usr/local/slog
+CMAKE_SOURCE_DIR = /usr/local/src/gitHub/gg_slog
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /usr/local/slog
+CMAKE_BINARY_DIR = /usr/local/src/gitHub/gg_slog
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -72,9 +72,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/slog/CMakeFiles /usr/local/slog/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/src/gitHub/gg_slog/CMakeFiles /usr/local/src/gitHub/gg_slog/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/slog/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /usr/local/src/gitHub/gg_slog/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
